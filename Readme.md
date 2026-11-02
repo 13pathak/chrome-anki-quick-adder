@@ -1,41 +1,44 @@
 
 
-[<img src="https://github.com/1nsp1r3rnzt/chrome-anki-quick-adder/blob/master/docs/images/icon.png?raw=true&s=200">](https://chrome.google.com/webstore/detail/anki-quick-adder/gpbcbbajoagdgnokieocaplbhkiidmmb)
+[<img src="docs/images/icon.png" alt="Anki Quick Adder icon">](https://chrome.google.com/webstore/detail/anki-quick-adder/gpbcbbajoagdgnokieocaplbhkiidmmb)
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/gpbcbbajoagdgnokieocaplbhkiidmmb.svg)
 
 ![chrome users](https://img.shields.io/chrome-web-store/users/gpbcbbajoagdgnokieocaplbhkiidmmb.svg)  
 
-# chrome Anki Quick Adder
+# Anki Quick Adder
 
-> This chrome extension provides the ability to create Anki cards directly from Google Chrome on your Anki Desktop.
+> Create cards in Anki Desktop directly from Google Chrome.
 
-![main features](https://raw.githubusercontent.com/1nsp1r3rnzt/chrome-anki-quick-adder/master/docs/images/Add%20Cards%20Easily.png)
+This repository is based on [Ranjit Singh's Anki Quick Adder](https://github.com/1nsp1r3rnzt/chrome-anki-quick-adder). The Web Store links and badges refer to the original extension; use the source installation below to run the version in this repository.
+
+![Main features](docs/images/Add%20Cards%20Easily.png)
  
- ### features
+### Features
  - [x] Ability to create Anki cards directly from Google Chrome on your Anki
    Desktop.
- - [x] Drop-down with all your tag for auto-complete feature.
- - [x] create card from chrome Menu Extension icon.
+ - [x] Tag suggestions with autocomplete.
+ - [x] Create cards from the extension popup or Chrome context menu.
  - [x] In-line WYSIWYG editor.
 ## Demo
 
-![demo](https://github.com/1nsp1r3rnzt/chrome-anki-quick-adder/blob/master/demo.gif?raw=true)
+![Creating a card from the browser](demo.gif)
 
 
 ## Installation
 
 
-- Please *start Anki* before running chrome or before installing chrome extension.
-1. Install [ankiConnect](https://ankiweb.net/shared/info/2055492159)
-- Please [see note for windows users](https://git.foosoft.net/alex/anki-connect#notes-for-windows-users) to allow ankiConnect.
-- Mac users need to **[follow these instructions](https://git.foosoft.net/alex/anki-connect#notes-for-macos-users)** to allow communication.
-2. Restart Anki 
-3. install [extension from webstore](https://chrome.google.com/webstore/detail/anki-quick-adder/gpbcbbajoagdgnokieocaplbhkiidmmb)
-4. See known [bugs and issues](#known-bugs-and-solutions) in this readme to solve any bugs.
+1. Install [AnkiConnect](https://ankiweb.net/shared/info/2055492159) in Anki Desktop, then restart Anki.
+2. Keep Anki running while using the extension. See the AnkiConnect notes for [Windows](https://git.foosoft.net/alex/anki-connect#notes-for-windows-users) and [macOS](https://git.foosoft.net/alex/anki-connect#notes-for-macos-users) if the connection fails.
+3. Download and extract this repository, or clone it:
+   ```bash
+   git clone https://github.com/13pathak/chrome-anki-quick-adder.git
+   cd chrome-anki-quick-adder
+   ```
+4. Open `chrome://extensions`, enable **Developer mode**, and click **Load unpacked**.
+5. Select the repository folder containing `manifest.json`.
 
-### Clone
-- Clone this repo to your local machine using `https://github.com/1nsp1r3rnzt/chrome-anki-quick-adder/`
+See [Known Bugs and Solutions](#known-bugs-and-solutions) for troubleshooting.
 
 ### Getting Started
 
@@ -43,7 +46,7 @@
 2. Please, select a deck and note type before adding cards for the first time.
 
 #### From Chrome Menu
-![ssss](https://raw.githubusercontent.com/1nsp1r3rnzt/chrome-anki-quick-adder/master/docs/images/anki-2.png)  
+![Adding selected text through the context menu](docs/images/anki-2.png)  
 
 1. Select the word, you want to enter.
 2. Right click, then, Click the field to send the word to that field.
@@ -53,10 +56,10 @@
 6. A popup will open to submit your data for 2 seconds and will close.
 
 ###  Add From Popup.
-![enter image description here](https://raw.githubusercontent.com/1nsp1r3rnzt/chrome-anki-quick-adder/master/docs/images/ankiStep1.png)
+![Adding a note from the extension popup](docs/images/ankiStep1.png)
 
 1.  Run Anki. The decklist is populated then only.
-2. Click App [icon][icon] to open app.
+2. Click the extension icon to open the popup.
 3. Select Deck type.
 4. Select Card type.
 5.  Enter the data in fields.
@@ -68,33 +71,20 @@ ___
 ## Known Bugs and Solutions 
 | Bug           | Solution      | Reason  |
 | ------------- |:-------------:| -----:|
-| chrome Menu disappears      | ![enter image description here](https://raw.githubusercontent.com/1nsp1r3rnzt/chrome-anki-quick-adder/master/docs/images/no-menu.png) 1. Start Anki <br> 2. Goto extension settings. <br> 3. Settings> Click Rebuild Menu  | 1. Anki is not running.<br>2. Chrome was opened before running Anki |
+| chrome Menu disappears      | ![Rebuild Menu setting](docs/images/no-menu.png) 1. Start Anki <br> 2. Goto extension settings. <br> 3. Settings> Click Rebuild Menu  | 1. Anki is not running.<br>2. Chrome was opened before running Anki |
 |  Duplicate Note. Note not Added.     | Change main field as Anki doesn't allow duplicate notes.   |   Note is already present in Anki |
-|  No notification on Mac on successful card addition.   |   no solution yet |need mac  to test so not fixable yet.|
+| No notification on macOS after adding a card. | Check Anki directly to confirm the note was added. | This issue is unresolved. |
 ---
 
 ## Contributing
 
->
-
-### Step 1
-
-- **Option 1**
-    - 🍴 Fork this repo!
-
-- **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/1nsp1r3rnzt/chrome-anki-quick-adder.git`
-
-### Step 2
-
-- **HACK AWAY!** 🔨🔨🔨
-
-### Step 3
-
-- 🔃 Create a new pull request using <a href="https://github.com/1nsp1r3rnzt/chrome-anki-quick-adder/compare/" target="_blank">`new pull request`</a>.
+Fork this repository, make your changes on a branch, and test them by reloading the unpacked extension. Submit a [pull request](https://github.com/13pathak/chrome-anki-quick-adder/compare) with a description of the change and how you tested it.
 
 ---
-## ChangeLog
+## Original Extension Changelog
+
+The entries below document the original extension's releases.
+
                                         Version 1.0.4 - Tuesday, June 19th, 2018
                                         - Ability to export and import your saved notes in extension.
                                         - fixed typeError bug on saving notes.
@@ -159,5 +149,5 @@ ___
 
 ## License
 
-- **[MIT license](/LICENSE)**
+- **[MIT license](LICENSE)**
 - Copyright 2018 © <a href="http://codehealthy.com" target="_blank">Ranjit Singh</a>.
